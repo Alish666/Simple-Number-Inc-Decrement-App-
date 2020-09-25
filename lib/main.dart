@@ -25,10 +25,16 @@ class _CounterState extends State<Counter> {
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
-          backgroundColor: Color.fromRGBO(61, 84, 188, 1),
+          backgroundColor: Color.fromRGBO(255, 119, 69, 1),
         ),
         body: Container(
-          decoration: BoxDecoration(color: Color.fromRGBO(118, 137, 206, 1)),
+          decoration: BoxDecoration(
+            color: Color.fromRGBO(118, 137, 206, 1),
+            gradient: LinearGradient(colors: [
+              Color.fromRGBO(255, 119, 69, 1),
+              Color.fromRGBO(244, 50, 110, 1)
+            ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+          ),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -36,8 +42,8 @@ class _CounterState extends State<Counter> {
                 Text(
                   "Tap '-' to decrement",
                   style: TextStyle(
-                      color: Color.fromRGBO(196, 202, 234, 1),
-                      fontSize: 15,
+                      color: Colors.white,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -45,11 +51,11 @@ class _CounterState extends State<Counter> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                      color: Color.fromRGBO(196, 202, 234, 1),
+                      color: Colors.white,
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.all(Radius.circular(10))),
-                  padding: EdgeInsets.all(12),
-                  margin: EdgeInsets.fromLTRB(130, 0, 130, 0),
+                  padding: EdgeInsets.all(18),
+                  margin: EdgeInsets.fromLTRB(110, 0, 110, 0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -61,7 +67,7 @@ class _CounterState extends State<Counter> {
                         },
                         child: Text("—",
                             style: TextStyle(
-                                color: Color.fromRGBO(48, 48, 48, 1),
+                                color: Color.fromRGBO(244, 50, 110, 1),
                                 fontSize: 25)),
                       ),
                       SizedBox(
@@ -69,7 +75,7 @@ class _CounterState extends State<Counter> {
                       ),
                       Text("$_counter",
                           style: TextStyle(
-                              color: Color.fromRGBO(48, 48, 48, 1),
+                              color: Color.fromRGBO(244, 50, 110, 1),
                               fontSize: 25)),
                       SizedBox(
                         width: 18,
@@ -82,7 +88,7 @@ class _CounterState extends State<Counter> {
                         },
                         child: Text("+",
                             style: TextStyle(
-                                color: Color.fromRGBO(48, 48, 48, 1),
+                                color: Color.fromRGBO(244, 50, 110, 1),
                                 fontSize: 25)),
                       )
                     ],
@@ -93,8 +99,8 @@ class _CounterState extends State<Counter> {
                 ),
                 Text("Tap '+' to increment",
                     style: TextStyle(
-                        color: Color.fromRGBO(196, 202, 234, 1),
-                        fontSize: 15,
+                        color: Colors.white,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold))
               ],
             ),
