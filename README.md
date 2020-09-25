@@ -1,6 +1,6 @@
 # rusProject
 
-A new Flutter project.
+Testing number decrementer/incrementer application in flutter with simple UI.
 
 ## Getting Started
 
